@@ -1,0 +1,4 @@
+interface:
+  display_name: "Smart Model Router"
+  short_description: "Route projects with models, tools, and continuity"
+
