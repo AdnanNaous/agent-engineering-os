@@ -1,7 +1,7 @@
 
 # Continuity Guard
 
-Maintain a concise, evidence-backed handoff in `.codex/continuity/STATE.md` inside the actual project or workspace. This is a project artifact, not a global memory update. It cannot recover unsaved context or guarantee automatic execution after a usage reset.
+Maintain a concise, evidence-backed handoff inside the actual project or workspace when continuity is useful. Reuse the project's established checkpoint convention; otherwise `.codex/continuity/STATE.md` is a suggested location. Adapt the format to better persistence mechanisms exposed by the runtime. A checkpoint is a project artifact, not a global memory update. It cannot recover unsaved context or guarantee automatic execution after a usage reset.
 
 ## Establish the working context
 
@@ -31,7 +31,8 @@ Record enough to resume without rereading the entire conversation:
 - Changed files, ownership when known, and pre-existing changes that must be preserved.
 - Checks: command or method, working directory, result, date, relevant revision/state, and remaining limitations. Distinguish passed, failed, not run, and interrupted.
 - Pending operations and external actions, including exact targets and whether attempted, confirmed, failed, or uncertain. Verify the outcome of an interrupted operation before repeating it. Process IDs alone do not establish that a process is still running.
-- A concrete next action and a short ordered remaining plan; authorized scope and any genuinely pending user decision.
+- A concrete next action and a short remaining plan; authorized scope and any genuinely pending user decision.
+- Confirmed execution environment and material unavailable capabilities when a handoff depends on them; do not preserve a stale model catalog or secret credentials.
 
 Keep the checkpoint compact and current rather than appending a transcript. Preserve unresolved work when marking another item complete. Write UTF-8; prefer a temporary file in the same directory followed by replacement after successful writing when practical. Never replace a useful checkpoint with an empty scaffold. Avoid secrets, credentials, and unnecessary personal data. Do not auto-commit, push, or change ignore rules merely to save a checkpoint.
 

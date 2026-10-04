@@ -29,7 +29,7 @@ Combine media when they serve one composition. An image plus subtle depth or sha
 
 ## Source and prepare assets
 
-Read [assets-and-performance.md](visual-assets-and-performance.md) when acquiring or optimizing media, models, or GPU-heavy visuals.
+Read [visual-assets-and-performance.md](visual-assets-and-performance.md) when acquiring or optimizing media, models, or GPU-heavy visuals.
 
 - Reuse suitable existing assets first. Search the web for needed assets rather than asking the user to find every file. Inspect candidates for style, framing, quality, animation suitability, and delivery cost.
 - Verify asset-specific source and license terms for the intended use. Record source, creator, license link, required attribution, and modifications using the project's convention or a small asset manifest. A download button or search result is not license evidence.
@@ -47,7 +47,7 @@ Read [assets-and-performance.md](visual-assets-and-performance.md) when acquirin
 
 ## Animate the object, not just its container
 
-Read [motion-and-render-review.md](visual-motion-and-review.md) when implementing animation or planning visual inspection.
+Read [visual-motion-and-review.md](visual-motion-and-review.md) when implementing animation or planning visual inspection.
 
 - Choose motion from structure, material, forces, and scale. Trees are rooted, cloth has pinned points, rigid products preserve shape, and particles have coherent sources and flow.
 - For vegetation prefer anchored vertex deformation or a suitable rig with layered wind, branch sway, leaf flutter, spatial variation, and gusts. Generic whole-object rotation does not substitute for organic deformation.

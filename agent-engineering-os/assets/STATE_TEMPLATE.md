@@ -8,6 +8,7 @@ Replace guidance with known facts when creating a project checkpoint. Use `Unkno
 - Active task identifier:
 - Branch / commit (if Git):
 - Other tasks or writers sharing this workspace:
+- Confirmed execution environment and material access/capability limits:
 
 ## Objective and acceptance criteria
 - Current user objective:
