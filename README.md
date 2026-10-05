@@ -45,7 +45,7 @@ The installable bundle is [agent-engineering-os/](agent-engineering-os/). Keep i
 For a Codex environment with a supported skill installer, ask it to install the inner folder from this repository:
 
 ```text
-Install the skill from https://github.com/AdnanNaous/smart-model-router/tree/main/agent-engineering-os
+Install the skill from https://github.com/AdnanNaous/agent-engineering-os/tree/main/agent-engineering-os
 ```
 
 For manual installation into a Codex user-skills directory:
@@ -61,7 +61,11 @@ Follow your runtime's current skill discovery instructions. In ChatGPT environme
 
 Replace an existing local `smart-model-router` installation with the new bundle, preserving any personal modifications first. Avoid keeping both active unless you intentionally want overlapping triggers. This release changes the skill slug, UI metadata, examples, and folder links; Git history remains in the same repository.
 
-The repository URL retains its existing slug unless it is separately renamed through supported GitHub administration tooling. The installable skill slug is `agent-engineering-os`.
+The repository and installable skill now use the slug `agent-engineering-os`. For existing clones, update the remote without replacing the checkout or its history:
+
+```sh
+git remote set-url origin https://github.com/AdnanNaous/agent-engineering-os.git
+```
 
 ## Examples
 
