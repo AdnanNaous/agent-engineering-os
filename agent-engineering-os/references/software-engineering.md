@@ -24,6 +24,8 @@ Inspect the actual SDK and model/tool interfaces rather than assuming a prompt s
 
 Separate model output from trusted execution. Validate tool arguments/results to the application's needs; exercise malformed data and prompt-injection boundaries when relevant. Implement concurrency, timeouts, bounded retries, and measurable spend controls from the application's requirements. These deployed-system controls are distinct from a universal limit on the assistant's intelligence.
 
+For repeated agent work, diagnose whether a failure concerns task definition, state, permissions, orchestration, integration, or implementation. Repair the responsible layer and exercise comparable cases without supplying the prior answer. Keep assignment-specific history out of reusable instructions.
+
 Evaluate task-level success and realistic failure cases. Measure cost or latency when optimization is required and trustworthy metrics exist. Adopt retrieval, memory, multiple agents, or complex planning when the actual use case benefits, rather than as mandatory architecture.
 
 ## Verify relevant behavior

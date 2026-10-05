@@ -78,7 +78,13 @@ def validate(root):
         errors.append(f"Invalid metadata: {exc}")
     if (root / "smart-model-router").exists():
         errors.append("Old skill folder remains alongside migrated bundle")
-    for path in [root / "README.md", *bundle.rglob("*.md")]:
+    documentation = [
+        *root.glob("*.md"),
+        *bundle.rglob("*.md"),
+        *(root / "docs").rglob("*.md"),
+        *(root / "tests").glob("*.md"),
+    ]
+    for path in documentation:
         errors.extend(check_links(path, root))
     return errors
 

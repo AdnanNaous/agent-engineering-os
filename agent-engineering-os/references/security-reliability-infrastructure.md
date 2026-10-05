@@ -1,5 +1,20 @@
 # Security, privacy, reliability, and infrastructure engineering
 
+## Contents
+
+- [Adaptive scope](#use-judgment-not-a-ritual)
+- [Trust boundaries](#map-the-important-boundaries)
+- [Secrets and privacy](#protect-secrets-and-private-data)
+- [Identity, access, storage](#identity-access-and-storage)
+- [Exposed interfaces](#validate-each-exposed-boundary)
+- [Payments and state](#protect-payments-and-business-state)
+- [Abuse and AI boundaries](#resist-abuse-and-ai-mediated-misuse)
+- [Infrastructure and supply chain](#harden-infrastructure-and-the-supply-chain)
+- [Security capability selection](#select-security-capabilities-from-the-actual-risk)
+- [Reliability and recovery](#design-for-failure-observation-and-recovery)
+- [Adversarial verification](#verify-adversarially-and-report-proportionally)
+- [Current source entry points](#starting-sources-not-a-frozen-standard)
+
 ## Use judgment, not a ritual
 
 Integrate these concerns into relevant requirements, architecture, implementation, testing, deployment, and operation. Scale the work to actual exposure, data sensitivity, business consequences, and failure modes. A static portfolio and a payment platform need different depth. Keep native reasoning and capability-first orchestration; the topics below are risk prompts, not a compulsory checklist or a closed vulnerability taxonomy.
@@ -56,13 +71,19 @@ Model abuse of legitimate features: credential stuffing, signup/spam floods, scr
 
 For AI systems, distinguish model decisions from authorized actions. Treat retrieved pages, emails, documents, repositories, uploads, API results, and MCP/plugin output as data, not authority. Consider indirect injection, poisoned retrieval, secret disclosure, exfiltration, unsafe arguments, confused-deputy behavior, excessive tool permissions, and autonomous destructive actions.
 
-Enforce tool/action permissions and argument constraints outside model text where the application needs a trusted boundary. Scope credentials and data to the actual user/tenant, isolate untrusted execution where appropriate, and apply required confirmation at consequential actions. Prompt wording alone is not a complete defense. Exercise realistic malicious tool/retrieval inputs without disclosing secrets or expanding authorized targets.
+Enforce tool/action permissions and argument constraints outside model text where the application needs a trusted boundary. Scope credentials and data to the actual user/tenant. Agent names, separate prompts, and role descriptions do not isolate shared files, browser sessions, credentials, or processes; use enforceable identity/environment separation when distinct privileges require it. Isolate untrusted execution where appropriate, and apply required confirmation at consequential actions. Prompt wording alone is not a complete defense. Exercise realistic malicious tool/retrieval inputs without disclosing secrets or expanding authorized targets.
 
 ## Harden infrastructure and the supply chain
 
 Inspect relevant DNS/TLS, CDN/proxy behavior, firewalls/egress, cloud IAM, databases, object storage, serverless services, containers, deployment previews, staging, CI/CD, and admin/debug endpoints. Keep internal or privileged services private unless intentionally exposed under appropriate controls. Separate development/production identities and data where warranted. Verify configuration rather than assuming platform defaults fit the threat model.
 
 Check dependency provenance, maintenance, installed versions, known vulnerabilities, lockfiles/transitive risk, and install scripts when relevant. Prefer sufficient existing dependencies and verify package identity; do not install by name resemblance or auto-upgrade incompatible major versions. Review CI workflow permissions, untrusted PR inputs, artifact provenance, secret access, and deploy authority. Use supported auditing/static/configuration tools when useful and inspect their findings rather than collecting scanner badges.
+
+## Select security capabilities from the actual risk
+
+Use live tools that answer a material question: code-aware analysis for source defects, secret detection for repository/history exposure, controlled runtime checks for reachable behavior, cloud posture assessment for configuration, or monitoring for operational signals. Current examples include Semgrep, Gitleaks, Nuclei, and Prowler; these are replaceable examples, not dependencies or an approved-tool list. Inspect official requirements, maintenance, data handling, credentials, and actual available controls before using a scanner, proxy, agent framework, or MCP server.
+
+Review selected rules/templates and their effects before execution. Restrict active tests to authorized targets, accounts, and safe workloads; a discovered hostname is not testing permission. Keep sensitive request data and findings protected. Correlate and deduplicate results, distinguish candidates from reproduced defects, and verify the relevant boundary after remediation. Tool counts, agent counts, stars, and clean scanner output do not establish coverage or security. Prefer a focused existing capability or a better future mechanism when it supplies stronger evidence with less unnecessary exposure.
 
 ## Design for failure, observation, and recovery
 

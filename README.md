@@ -1,4 +1,12 @@
+![Agent Engineering OS: native judgment connected to research, engineering, operations, and creative work](docs/assets/agent-engineering-os.svg)
+
 # Agent Engineering OS
+
+**Capability-first · Evidence-driven · Open to evolution**
+
+[Install](#install) · [Capabilities](#capabilities) · [Examples](#examples) · [Bundle](#bundle) · [Evidence](#validation) · [Maintenance](docs/maintenance.md)
+
+> Give the agent an outcome. Let its native intelligence choose the useful work. Verify what actually happened.
 
 Agent Engineering OS is a capability-first skill for turning goals into verified work. It combines research, software engineering, computer/app operation, creative production, and project continuity in environments that expose those capabilities.
 
@@ -28,16 +36,17 @@ The diagram describes relationships, not a required pipeline. A simple stable qu
 
 ## Capabilities
 
-- **Research:** retrieve and inspect relevant sources, evaluate quality and disagreements, synthesize with citations, and expose material uncertainty.
-- **Engineering:** understand actual repositories, implement requested changes, run appropriate checks, debug failures, and verify affected behavior.
-- **Security and reliability:** integrate trust boundaries, privacy, authorization, secrets, abuse resistance, infrastructure, observability, and recovery into relevant engineering work. Scale checks to exposure and consequence.
-- **Computer and app work:** operate available files, terminals, browsers, connected apps, or cloud environments and inspect resulting state.
-- **Creative production:** preserve coherent visual direction, use appropriate media, track asset provenance, optimize performance, and inspect desktop/mobile output and motion.
-- **Motion and video:** compose code, captured footage, generated media, or a hybrid; preserve brand/character continuity, editable timing, reproducible renders, and exported-output verification when relevant.
-- **Browser audiovisual work:** build code-driven visuals and synthesized sound when appropriate, with shared timing, deliberate playback controls, technical audio checks, and distinct interactive/exported deliverables.
-- **Artifact reconstruction:** inspect authorized shipped artifacts or observed behavior, distinguish static evidence from runtime findings, and verify a scoped reimplementation without promising recovery of original source.
-- **Collaboration:** use real subagents or parallel work when independence, specialist context, or verification makes it worthwhile.
-- **Continuity:** resume from compact evidence-backed checkpoints reconciled with live files and operations.
+| Capability | What the operating layer supports |
+| --- | --- |
+| **Research** | Inspect sources, cross-check important claims, resolve contradictions, cite evidence. |
+| **Engineering** | Implement in the actual repository, run relevant checks, debug, verify behavior. |
+| **Security & reliability** | Trust boundaries, privacy, access, secrets, abuse resistance, infrastructure, recovery. |
+| **Computer & app work** | Operate available environments; verify changes and supported recurring jobs. |
+| **Creative & visual work** | Deliberate identity, licensed assets, accessibility, performance, rendered inspection. |
+| **Motion, video & audio** | Code/captured/generated/hybrid production, editable timing, sound, repeatable export. |
+| **Artifact reconstruction** | Authorized analysis and scoped behavioral reimplementation with evidence. |
+| **Collaboration & continuity** | Useful optional delegation, integrated results, concise resumable state. |
+| **Evolution** | Improve instructions from observed outcomes; replace outdated methods when authorized. |
 
 These are composable capabilities, not mandatory stages. The reference files are loaded only when useful.
 
@@ -118,6 +127,19 @@ Creative references are selected for the brief, not treated as a permanent toolc
 
 You can initiate work from a phone/chat conversation. Actual execution uses available environments and tools; the skill does not create an automatic transfer to another computer, chat, or coding runtime.
 
+## Repository map
+
+| Location | Audience and purpose |
+| --- | --- |
+| [agent-engineering-os/](agent-engineering-os/) | The portable installable skill, with compact entry point and conditional references |
+| [AGENTS.md](AGENTS.md) | Repository context for current and future coding agents |
+| [docs/](docs/) | Maintenance context and lightweight editable presentation assets |
+| [tests/](tests/) | Validator regression cases and transparent behavioral evaluation reports |
+| [tools/](tools/) | Structural validation and its pinned dependency |
+| [Validation workflow](.github/workflows/validate.yml) | Read-only checks on GitHub changes; no automatic instruction editing |
+
+The installable bundle stays independent of repository decoration. A future agent can start from `AGENTS.md` for maintenance or `SKILL.md` for task execution and use only the context it needs.
+
 ## Bundle
 
 | File | Purpose |
@@ -142,11 +164,13 @@ You can initiate work from a phone/chat conversation. Actual execution uses avai
 
 ## Validation
 
-Run `python3 tools/validate_skill.py` from the repository root to check metadata, bundle paths, invocation coherence, and relative documentation links. Run `python3 -m unittest discover -s tests` for the validator's failure cases. The validation tooling requires Python 3.9+ and PyYAML (`python3 -m pip install PyYAML`) if your environment does not already provide it.
+Run `python3 tools/validate_skill.py` from the repository root to check metadata, bundle paths, invocation coherence, and relative documentation links. Run `python3 -m unittest discover -s tests` for the validator's failure cases. The validation tooling requires Python 3.9+ and PyYAML. Use the available dependency or install the repository pin with `python3 -m pip install -r tools/requirements.txt`. The GitHub validation workflow exercises these checks on supported repository events.
 
 Structural checks cannot prove future model behavior, security, or successful task completion. Behavioral evaluation still requires realistic tasks and observed results. Changes should be reviewed for unnecessary prescriptions as well as correctness.
 
 See [observed behavioral evaluation](tests/behavioral-evaluation.md) for the local tasks exercised during this migration and their verification limits.
+
+See [security and recurring-work source evaluation](tests/security-worker-evaluation.md) for the latest inspected posts, useful additions, and deliberately omitted rigid prescriptions.
 
 See [creative evidence and evaluation](tests/creative-evaluation.md) for the inspected social demonstrations, primary production sources, resulting additions, and local execution checks. These observations inform conditional guidance; they do not establish model rankings or guarantee equivalent film quality.
 

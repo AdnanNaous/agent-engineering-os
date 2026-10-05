@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Engineering OS</title>
+  <desc id="desc">A capability-first operating layer. Native judgment connects research, engineering, operations, and creative work, with evidence and room to evolve.</desc>
+  <rect width="1200" height="360" rx="20" fill="#151713"/>
+  <path d="M32 32H1168V328H32Z" fill="none" stroke="#393d32"/>
+  <g stroke="#292d24" fill="none">
+    <path d="M720 32V328M780 32V328M840 32V328M900 32V328M960 32V328M1020 32V328M1080 32V328M1140 32V328"/>
+    <path d="M720 88H1168M720 148H1168M720 208H1168M720 268H1168"/>
+  </g>
+  <path d="M32 60V32H60M1140 32H1168V60M1168 300V328H1140M60 328H32V300" fill="none" stroke="#d7b785" stroke-width="3"/>
+  <g font-family="DejaVu Sans, Arial, sans-serif">
+    <text x="68" y="83" font-size="16" letter-spacing="3" fill="#d7b785">CAPABILITY-FIRST / OPEN TO WHAT COMES NEXT</text>
+    <text x="65" y="164" font-size="61" font-weight="700" letter-spacing="-2" fill="#f1eee5">Agent Engineering</text>
+    <text x="65" y="232" font-size="61" font-weight="700" letter-spacing="-2" fill="#f1eee5">OS</text>
+    <text x="184" y="221" font-size="21" fill="#c3c7b5">Native judgment. Real work. Evidence.</text>
+    <path d="M68 262H666" stroke="#444b39"/>
+    <text x="68" y="298" font-size="15" letter-spacing="2" fill="#abb89a">RESEARCH · ENGINEER · OPERATE · CREATE · EVOLVE</text>
+    <g stroke="#8d9f7b" fill="none" stroke-width="1.5">
+      <circle cx="930" cy="181" r="71"/>
+      <path d="M930 78V110M930 252V284M827 181H859M1001 181H1033"/>
+      <circle cx="930" cy="78" r="7" fill="#d7b785" stroke="none"/>
+      <circle cx="930" cy="284" r="7" fill="#d7b785" stroke="none"/>
+      <circle cx="827" cy="181" r="7" fill="#a4b993" stroke="none"/>
+      <circle cx="1033" cy="181" r="7" fill="#a4b993" stroke="none"/>
+    </g>
+    <text x="930" y="175" text-anchor="middle" font-size="16" letter-spacing="1" fill="#f1eee5">NATIVE</text>
+    <text x="930" y="198" text-anchor="middle" font-size="16" letter-spacing="1" fill="#f1eee5">JUDGMENT</text>
+    <g font-size="14" fill="#c3c7b5">
+      <text x="930" y="58" text-anchor="middle">Research</text>
+      <text x="930" y="313" text-anchor="middle">Engineer</text>
+      <text x="810" y="186" text-anchor="end">Operate</text>
+      <text x="1051" y="186">Create</text>
+    </g>
+  </g>
+</svg>

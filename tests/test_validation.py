@@ -2,7 +2,7 @@ from pathlib import Path
 import tempfile
 import unittest
 
-from tools.validate_skill import check_links, load_frontmatter
+from tools.validate_skill import check_links, load_frontmatter, validate
 
 
 class ValidationTests(unittest.TestCase):
@@ -39,6 +39,30 @@ class ValidationTests(unittest.TestCase):
                 doc.write_text(content)
                 with self.assertRaises(ValueError):
                     load_frontmatter(doc)
+
+    def test_maintenance_and_evaluation_links_are_checked(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            bundle = root / "agent-engineering-os"
+            (bundle / "agents").mkdir(parents=True)
+            (bundle / "SKILL.md").write_text(
+                '---\nname: agent-engineering-os\ndescription: "Verified work"\n---\n'
+            )
+            (bundle / "agents/openai.yaml").write_text(
+                'interface:\n  display_name: Agent Engineering OS\n'
+                '  short_description: Capability-first verified engineering\n'
+                '  default_prompt: Use $agent-engineering-os\n'
+            )
+            (root / "README.md").write_text("Project\n")
+            self.assertEqual(validate(root), [])
+            for relative in ("AGENTS.md", "docs/nested/maintenance.md", "tests/evaluation.md"):
+                with self.subTest(relative=relative):
+                    doc = root / relative
+                    doc.parent.mkdir(parents=True, exist_ok=True)
+                    doc.write_text("[missing](absent.md)\n")
+                    findings = validate(root)
+                    self.assertTrue(any(relative in item and "missing link" in item for item in findings))
+                    doc.unlink()
 
 
 if __name__ == "__main__":
