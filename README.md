@@ -33,10 +33,15 @@ The diagram describes relationships, not a required pipeline. A simple stable qu
 - **Security and reliability:** integrate trust boundaries, privacy, authorization, secrets, abuse resistance, infrastructure, observability, and recovery into relevant engineering work. Scale checks to exposure and consequence.
 - **Computer and app work:** operate available files, terminals, browsers, connected apps, or cloud environments and inspect resulting state.
 - **Creative production:** preserve coherent visual direction, use appropriate media, track asset provenance, optimize performance, and inspect desktop/mobile output and motion.
+- **Motion and video:** compose code, captured footage, generated media, or a hybrid; preserve brand/character continuity, editable timing, reproducible renders, and exported-output verification when relevant.
+- **Browser audiovisual work:** build code-driven visuals and synthesized sound when appropriate, with shared timing, deliberate playback controls, technical audio checks, and distinct interactive/exported deliverables.
+- **Artifact reconstruction:** inspect authorized shipped artifacts or observed behavior, distinguish static evidence from runtime findings, and verify a scoped reimplementation without promising recovery of original source.
 - **Collaboration:** use real subagents or parallel work when independence, specialist context, or verification makes it worthwhile.
 - **Continuity:** resume from compact evidence-backed checkpoints reconciled with live files and operations.
 
 These are composable capabilities, not mandatory stages. The reference files are loaded only when useful.
+
+The skill can evolve through actual use: inspect new capabilities, experiment, observe failures, revise the approach, and preserve evidence-backed lessons where persistence is supported. When skill maintenance is authorized and available, update and validate the reusable instructions themselves. Replace obsolete tools, sources, and methods rather than treating them as permanent boundaries. Saved instructions and project knowledge do not train model weights or create continuous background execution.
 
 ## Install
 
@@ -97,6 +102,20 @@ production configuration, and recovery according to the actual stack.
 
 Security guidance is activated for relevant public/sensitive systems, not trivial code questions. It is integrated into design and implementation, rather than relying on a scanner after the application is built. Findings and checks need evidence; the skill does not certify a system as secure or compliant.
 
+```text
+$agent-engineering-os Make a launch film for this product using its actual
+features and brand. Choose an available production approach, inspect the
+export, and leave editable sources and reproducible render instructions.
+```
+
+```text
+$agent-engineering-os Reconstruct the behavior of this authorized shipped
+artifact. Separate observation from inference, implement the requested
+compatible behavior, and verify the important boundaries.
+```
+
+Creative references are selected for the brief, not treated as a permanent toolchain or model benchmark. Repeated production can maintain a runnable project with brand tokens, licensed assets, scene components, timeline data, render commands, and concise checkpoints. This does not require a large prompt or a fixed agent team.
+
 You can initiate work from a phone/chat conversation. Actual execution uses available environments and tools; the skill does not create an automatic transfer to another computer, chat, or coding runtime.
 
 ## Bundle
@@ -113,6 +132,9 @@ You can initiate work from a phone/chat conversation. Actual execution uses avai
 | [project-team.md](agent-engineering-os/references/project-team.md) | Useful delegation and integration |
 | [continuity.md](agent-engineering-os/references/continuity.md) | Checkpoint and resumption |
 | [creative-production.md](agent-engineering-os/references/creative-production.md) | Creative research and production |
+| [motion-video-production.md](agent-engineering-os/references/motion-video-production.md) | Code/generated/hybrid films, timing, identity, repeatable export, reusable project context |
+| [browser-motion-and-audio.md](agent-engineering-os/references/browser-motion-and-audio.md) | Browser timing, procedural sound, autoplay/replay, graceful degradation, audio and export verification |
+| [reverse-engineering.md](agent-engineering-os/references/reverse-engineering.md) | Authorized artifact analysis, behavioral reconstruction, evidence and parity limits |
 | [visual-web.md](agent-engineering-os/references/visual-web.md) | Visual website implementation and inspection |
 | [visual-assets-and-performance.md](agent-engineering-os/references/visual-assets-and-performance.md) | Asset provenance, optimization, rendering budgets |
 | [visual-motion-and-review.md](agent-engineering-os/references/visual-motion-and-review.md) | Motion construction and observed review |
@@ -125,6 +147,8 @@ Run `python3 tools/validate_skill.py` from the repository root to check metadata
 Structural checks cannot prove future model behavior, security, or successful task completion. Behavioral evaluation still requires realistic tasks and observed results. Changes should be reviewed for unnecessary prescriptions as well as correctness.
 
 See [observed behavioral evaluation](tests/behavioral-evaluation.md) for the local tasks exercised during this migration and their verification limits.
+
+See [creative evidence and evaluation](tests/creative-evaluation.md) for the inspected social demonstrations, primary production sources, resulting additions, and local execution checks. These observations inform conditional guidance; they do not establish model rankings or guarantee equivalent film quality.
 
 ## Limits
 

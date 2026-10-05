@@ -45,6 +45,8 @@ Read [visual-assets-and-performance.md](visual-assets-and-performance.md) when a
 - Keep headings, links, and calls to action readable at every animation state and crop. Put essential content in accessible HTML. Decorative layers must not intercept pointer events or keyboard focus.
 - Add interaction only when it improves comprehension, feedback, navigation, or intended atmosphere. Do not require hover on touch devices or hijack scrolling for decoration.
 
+Use reference sites or permitted recordings to understand composition and behavior across states, not just to copy a hero image. For scroll-driven work, consider section boundaries, reveal pacing, sticky behavior, changing crops, and backward navigation together. Keep reading and navigation usable when motion is reduced or assets fail. Compare implementations against the same brief and relevant conditions using hierarchy, legibility, coherence, interaction, accessibility, and performance; a selected social comparison cannot prove a universal model advantage or reveal the underlying rendering stack.
+
 ## Animate the object, not just its container
 
 Read [visual-motion-and-review.md](visual-motion-and-review.md) when implementing animation or planning visual inspection.

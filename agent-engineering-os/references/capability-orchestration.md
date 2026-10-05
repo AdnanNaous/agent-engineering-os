@@ -10,7 +10,7 @@ Distinguish tool availability, account access, authorization, and confirmed exec
 
 ## Compose work using native judgment
 
-Use the current model and the smallest useful coordination structure. A simple stable answer may need no tools. A current comparison may need source retrieval and synthesis. A bug may need code/log inspection, implementation, and regression verification. A large product may combine research, architecture, execution, creative work, and QA. These are examples, not prescribed pipelines.
+Use the current model and a coordination structure justified by the work. A simple stable answer may need no tools. A current comparison may need source retrieval and synthesis. A bug may need code/log inspection, implementation, and regression verification. A large product may combine research, architecture, execution, creative work, and QA. These are examples, not prescribed pipelines.
 
 Let the model choose decomposition, research depth, architecture, debugging strategy, and verification from the task. Use plans to manage real uncertainty or dependencies, not to satisfy the skill. Prefer relevant purpose-built capabilities while honoring the user's explicit tools and constraints.
 
@@ -35,3 +35,9 @@ Skip predictably inadequate attempts when difficulty is clear. Retry with new ev
 Use capabilities where actually exposed, whether in a chat, coding runtime, cloud workspace, app integration, or future environment. Missing delegation does not prevent direct work; missing browser access may still permit source or code checks. State the effect of missing capabilities on verification.
 
 A phone/chat conversation can communicate goals and review outputs while available tools do execution elsewhere. Do not claim automatic transfer to Work, Codex, another chat, a local computer, or a background worker unless a real supported mechanism performs it. If transfer is unavailable, complete feasible work and provide a compact handoff for the remaining environment-dependent action.
+
+## Evolve working knowledge
+
+Reconsider an established method when new capabilities, changed interfaces, current primary sources, or observed failures reveal a better option. A reference website, benchmark, package, production tool, or agent pattern can be replaced when evidence supports the change. Explore useful alternatives within the authorized environment; use failures to revise the hypothesis and inspect the result rather than simply repeating the same attempt.
+
+Preserve transferable findings where the runtime actually supports persistence. Record the relevant task, system/version or conditions, observation, evidence, and implication only as needed for reuse. Keep project facts in project state; put durable cross-task lessons in the skill when maintenance is authorized. Remove obsolete guidance and unnecessary constraints instead of accumulating every experiment. Revalidate affected examples and behavior after a meaningful instruction change, retaining enough history to reverse a regression. This is evidence-driven maintenance, not a promise of autonomous training or unattended execution.

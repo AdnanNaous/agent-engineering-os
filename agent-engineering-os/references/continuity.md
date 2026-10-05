@@ -47,3 +47,5 @@ Keep the checkpoint compact and current rather than appending a transcript. Pres
 - Do not automatically create scheduled jobs, restart sessions, consume reset credits, or bypass usage limits. Resume when the user invokes the skill or the ongoing authorized session continues.
 
 At completion, update the checkpoint with the final outcome, verification, and any remaining limitations. If nothing remains, say so instead of inventing another task.
+
+For long media work, reference the current timeline and asset manifest rather than embedding them in the checkpoint. Record verified render ranges, source/version identity, pending generation or render jobs, export checks, and a concrete resume command when relevant. An asset selection or queued job is not a completed render; reconcile live outputs before restarting work that may incur cost.

@@ -1,6 +1,6 @@
 ---
 name: agent-engineering-os
-description: "Carry software, research, AI-agent, computer/app, and creative projects from an idea or checkpoint to a verified result. Use for Agent Engineering OS, end-to-end engineering, security/privacy/reliability/infrastructure reviews, evidence-based research, capability-aware orchestration, collaboration, visual production, or project continuity. Adapt to the actual runtime and user scope."
+description: "Carry software, research, AI-agent, computer/app, and creative projects from an idea or checkpoint to a verified result. Use for Agent Engineering OS, end-to-end engineering, security/privacy/reliability/infrastructure reviews, evidence-based research, capability-aware orchestration, collaboration, visual web, motion/video production, authorized artifact reconstruction, or project continuity. Adapt to the actual runtime and user scope."
 ---
 
 # Agent Engineering OS
@@ -34,6 +34,12 @@ Proceed through useful increments, observe results, and adapt. On failure, disti
 
 Do not end an execution request with instructions or a plan while feasible authorized work remains. When blocked, preserve completed work and identify the specific blocker and next action.
 
+## Learn and evolve through evidence
+
+Treat this skill and its references as revisable working knowledge. Use newer capabilities, current sources, experiments, and observed outcomes to improve the approach. Preserve useful lessons from failures as well as successes, and retire guidance contradicted by stronger evidence. No named tool, website, model, stack, or workflow is a permanent ceiling.
+
+When the task or standing authorization includes skill maintenance and the runtime supports it, improve the reusable skill itself: make a focused, reversible change, validate its links and metadata, exercise affected behavior where useful, and save it through the supported mechanism. Otherwise preserve concise project-local findings for future reuse. Record the conditions and evidence behind a lesson rather than turning one successful attempt into a universal rule. Instruction updates and saved project knowledge do not imply changes to model weights or continuous background learning.
+
 ## Load specialized guidance when relevant
 
 | Need | Reference |
@@ -46,6 +52,9 @@ Do not end an execution request with instructions or a plan while feasible autho
 | Useful subagents, parallel work, integration, independent review | [project-team.md](references/project-team.md) |
 | Resumption, long work, evidence-backed checkpoints | [continuity.md](references/continuity.md) |
 | Creative research, media, interactive artifacts, games | [creative-production.md](references/creative-production.md) |
+| Launch films, explainers, music visuals, generated/code/hybrid video, reusable brand production | [motion-video-production.md](references/motion-video-production.md) |
+| Browser audiovisual experiences, procedural sound, shared playback timing, audio/export QA | [browser-motion-and-audio.md](references/browser-motion-and-audio.md) |
+| Authorized analysis or reconstruction of shipped artifacts, formats, or behavior with incomplete source | [reverse-engineering.md](references/reverse-engineering.md) |
 | Visual website implementation and rendered review | [visual-web.md](references/visual-web.md) |
 | Media/model acquisition, provenance, optimization, GPU performance | [visual-assets-and-performance.md](references/visual-assets-and-performance.md) |
 | Animation construction and inspection over time | [visual-motion-and-review.md](references/visual-motion-and-review.md) |
