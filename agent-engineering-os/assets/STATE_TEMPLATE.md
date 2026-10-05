@@ -28,6 +28,7 @@ Replace guidance with known facts when creating a project checkpoint. Use `Unkno
 
 ## Unknown / blocked
 - Missing fact or blocker, its impact, and how to resolve it:
+- Relevant unresolved security/reliability findings, mitigations, and recovery/deployment limits:
 
 ## Decisions
 - Decision, reason, and constraint it satisfies:
@@ -49,4 +50,3 @@ Replace guidance with known facts when creating a project checkpoint. Use `Unkno
 - Exact next step and files to inspect:
 - Conditions requiring user input:
 - Final outcome if complete, with any limitations:
-

@@ -8,6 +8,8 @@ Plan only as much as uncertainty and dependencies warrant. Define risky interfac
 
 For unfamiliar/current technology, combine installed-code inspection with relevant official documentation. Research should inform implementation without becoming a compulsory phase for familiar tasks. Use the strongest useful available coding/execution environment and keep its actual capabilities distinct from its name.
 
+For production-facing software, sensitive data, auth/access, payments, public APIs, databases, infrastructure, deployment, or meaningful abuse/failure surfaces, load [security-reliability-infrastructure.md](security-reliability-infrastructure.md). Integrate its relevant invariants during design and implementation, not only in a final scanner pass. Scale depth to the system and preserve native judgment about how to perform the work.
+
 ## Implement and debug
 
 Build cohesive increments and keep the application runnable when practical. Complete the requested user flow, including errors and recovery that materially affect it. Reproduce a defect or obtain decisive evidence; change the smallest coherent area that resolves the actual cause.
@@ -36,6 +38,8 @@ Evaluate task-level success and realistic failure cases. Measure cost or latency
 | AI agent | Task outcomes, tool errors, interruption/replay behavior, and applicable authority boundaries. |
 
 Choose checks by consequences, regression likelihood, and unresolved uncertainty. Run required project checks and added executable scripts. Avoid meaningless tests or a full suite for every trivial edit. Once relevant checks pass, broaden testing only when new changes, failures, or uncertainty justify it. Treat builds, unit tests, runtime QA, and live deployment as different evidence.
+
+For significant features, use relevant failure-model prompts: invalid/boundary input, empty state, slow/failed dependencies, duplicate actions, refresh/navigation, concurrent requests/tabs, device layouts, session and permission variants. Model meaningful business-state transitions and test forbidden transitions or partial failure rather than scattering state assumptions through UI code. Add practical regression tests for fixed security/reliability defects.
 
 For independent review, provide requirements and raw artifacts rather than your preferred diagnosis. Resolve disagreement with observable defects and discriminating checks. Verify integrated behavior after concurrent edits when needed.
 

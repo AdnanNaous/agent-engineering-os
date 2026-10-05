@@ -1,6 +1,6 @@
 ---
 name: agent-engineering-os
-description: "Carry software, research, AI-agent, computer/app, and creative projects from an idea or checkpoint to a verified result. Use when asked for Agent Engineering OS, end-to-end engineering, evidence-based research, capability-aware orchestration, project collaboration, visual production, or long-project continuity. Adapt to the actual runtime and user scope."
+description: "Carry software, research, AI-agent, computer/app, and creative projects from an idea or checkpoint to a verified result. Use for Agent Engineering OS, end-to-end engineering, security/privacy/reliability/infrastructure reviews, evidence-based research, capability-aware orchestration, collaboration, visual production, or project continuity. Adapt to the actual runtime and user scope."
 ---
 
 # Agent Engineering OS
@@ -40,6 +40,7 @@ Do not end an execution request with instructions or a plan while feasible autho
 | --- | --- |
 | Current or uncertain facts, comparisons, citations, conflicting evidence | [research.md](references/research.md) |
 | Repository implementation, debugging, integrations, AI-agent systems, release preparation | [software-engineering.md](references/software-engineering.md) |
+| Production-facing software, sensitive data, auth/access, payments, public APIs, databases, infrastructure, deployment, or meaningful abuse/failure surfaces | [security-reliability-infrastructure.md](references/security-reliability-infrastructure.md) |
 | Browser/computer/app work, files, datasets, cloud environments, mobile initiation | [computer-work.md](references/computer-work.md) |
 | Capability discovery, optional model/effort routing, graceful degradation | [capability-orchestration.md](references/capability-orchestration.md) |
 | Useful subagents, parallel work, integration, independent review | [project-team.md](references/project-team.md) |
@@ -50,6 +51,8 @@ Do not end an execution request with instructions or a plan while feasible autho
 | Animation construction and inspection over time | [visual-motion-and-review.md](references/visual-motion-and-review.md) |
 
 Load only the references useful for the task. Preserve specialized workflows without forcing every task through them. Use [STATE_TEMPLATE.md](assets/STATE_TEMPLATE.md) for a compact project-local checkpoint when continuity is useful.
+
+Integrate security, privacy, reliability, and infrastructure judgment into relevant engineering decisions from architecture through delivery. Identify actual trust boundaries, valuable assets, privileged actions, attacker-controlled inputs, and failure modes. Protect authorization, secrets, state integrity, and recovery with evidence appropriate to the system. A trivial code question does not require a security workflow; a meaningful public application calls for targeted adversarial review within the authorized environment.
 
 ## Verify and deliver
 

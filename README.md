@@ -30,6 +30,7 @@ The diagram describes relationships, not a required pipeline. A simple stable qu
 
 - **Research:** retrieve and inspect relevant sources, evaluate quality and disagreements, synthesize with citations, and expose material uncertainty.
 - **Engineering:** understand actual repositories, implement requested changes, run appropriate checks, debug failures, and verify affected behavior.
+- **Security and reliability:** integrate trust boundaries, privacy, authorization, secrets, abuse resistance, infrastructure, observability, and recovery into relevant engineering work. Scale checks to exposure and consequence.
 - **Computer and app work:** operate available files, terminals, browsers, connected apps, or cloud environments and inspect resulting state.
 - **Creative production:** preserve coherent visual direction, use appropriate media, track asset provenance, optimize performance, and inspect desktop/mobile output and motion.
 - **Collaboration:** use real subagents or parallel work when independence, specialist context, or verification makes it worthwhile.
@@ -84,6 +85,14 @@ $agent-engineering-os Continue from this project's checkpoint.
 Reconcile it with the current files and finish the remaining authorized work.
 ```
 
+```text
+$agent-engineering-os Build this public API and payment integration.
+Verify server-side access, payment state, replay/concurrency behavior,
+production configuration, and recovery according to the actual stack.
+```
+
+Security guidance is activated for relevant public/sensitive systems, not trivial code questions. It is integrated into design and implementation, rather than relying on a scanner after the application is built. Findings and checks need evidence; the skill does not certify a system as secure or compliant.
+
 You can initiate work from a phone/chat conversation. Actual execution uses available environments and tools; the skill does not create an automatic transfer to another computer, chat, or coding runtime.
 
 ## Bundle
@@ -95,6 +104,7 @@ You can initiate work from a phone/chat conversation. Actual execution uses avai
 | [capability-orchestration.md](agent-engineering-os/references/capability-orchestration.md) | Live discovery, optional routing, portability |
 | [research.md](agent-engineering-os/references/research.md) | Evidence quality, contradictions, citations |
 | [software-engineering.md](agent-engineering-os/references/software-engineering.md) | Implementation, debugging, AI-agent systems, delivery |
+| [security-reliability-infrastructure.md](agent-engineering-os/references/security-reliability-infrastructure.md) | Threat-aware engineering, privacy, infrastructure, reliability, and adversarial verification |
 | [computer-work.md](agent-engineering-os/references/computer-work.md) | Environment/app execution and final-state verification |
 | [project-team.md](agent-engineering-os/references/project-team.md) | Useful delegation and integration |
 | [continuity.md](agent-engineering-os/references/continuity.md) | Checkpoint and resumption |
@@ -106,9 +116,11 @@ You can initiate work from a phone/chat conversation. Actual execution uses avai
 
 ## Validation
 
-Run `python3 tools/validate_skill.py` from the repository root to check metadata, bundle paths, invocation coherence, and relative documentation links. Run `python3 -m unittest discover -s tests` for the validator's failure cases. The validation tooling requires PyYAML (`python3 -m pip install PyYAML`) if your environment does not already provide it.
+Run `python3 tools/validate_skill.py` from the repository root to check metadata, bundle paths, invocation coherence, and relative documentation links. Run `python3 -m unittest discover -s tests` for the validator's failure cases. The validation tooling requires Python 3.9+ and PyYAML (`python3 -m pip install PyYAML`) if your environment does not already provide it.
 
 Structural checks cannot prove future model behavior, security, or successful task completion. Behavioral evaluation still requires realistic tasks and observed results. Changes should be reviewed for unnecessary prescriptions as well as correctness.
+
+See [observed behavioral evaluation](tests/behavioral-evaluation.md) for the local tasks exercised during this migration and their verification limits.
 
 ## Limits
 

@@ -59,13 +59,17 @@ def validate(root):
             errors.append("SKILL.md: description must be nonempty text")
         if len(body.splitlines()) >= 500:
             errors.append("SKILL.md: move specialized detail into references")
-        interface = yaml.safe_load((bundle / "agents/openai.yaml").read_text())["interface"]
+        agent = yaml.safe_load((bundle / "agents/openai.yaml").read_text())
+        if not isinstance(agent, dict) or not isinstance(agent.get("interface"), dict):
+            raise ValueError("openai.yaml: interface must be a mapping")
+        interface = agent["interface"]
         if interface.get("display_name") != "Agent Engineering OS":
             errors.append("openai.yaml: stale display name")
         short = interface.get("short_description", "")
         if not isinstance(short, str) or not 25 <= len(short) <= 64:
             errors.append("openai.yaml: short_description must be 25–64 characters")
-        if f"${SLUG}" not in interface.get("default_prompt", ""):
+        prompt = interface.get("default_prompt", "")
+        if not isinstance(prompt, str) or f"${SLUG}" not in prompt:
             errors.append("openai.yaml: default_prompt must invoke the current skill")
         for reference in (bundle / "references").glob("*.md"):
             if f"references/{reference.name}" not in body:

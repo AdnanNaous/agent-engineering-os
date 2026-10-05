@@ -71,4 +71,3 @@ Read [visual-motion-and-review.md](visual-motion-and-review.md) when implementin
 - Inspect performance while the effect runs. Distinguish desktop emulation from real mobile testing and measurements from estimates. Run the project's relevant build/checks after changes.
 - Continue until the feature is integrated and observed problems are resolved. If browser access, dependencies, credentials, or hardware block validation, state the specific limitation and completed checks. Do not claim unseen output is visually verified.
 - Report what changed, key visual choices, checks, relevant attribution, and remaining limitations concisely. Leave the site runnable and document new dependencies where the project expects them. Deployment is separate unless already requested.
-

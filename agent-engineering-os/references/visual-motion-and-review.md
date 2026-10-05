@@ -33,4 +33,3 @@ Combine slow directional wind, world-space variation, occasional gusts, and smal
 Use screenshots for framing and responsive comparisons. Observe live motion or record a short clip when supported to inspect timing and continuity. Check runtime errors and network failures alongside visuals. Fix the cause of a problem and revisit that state; do not add effects to disguise incoherent composition.
 
 When tools cannot inspect motion or a device, document the gap precisely. Responsive browser emulation supports layout checks but does not prove real-phone performance.
-

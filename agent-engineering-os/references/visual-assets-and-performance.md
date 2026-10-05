@@ -35,4 +35,3 @@ Establish a baseline and measure relevant transfer sizes, draw calls, triangle c
 For demanding scenes define a quality ladder reducing resolution, shadows, postprocessing, textures, geometry, and particle/grass density; use a designed still if needed. Avoid rapid quality oscillation. Use instancing and distance-dependent vegetation detail rather than per-blade JavaScript updates.
 
 Verify bounds and culling after shader deformation. Match shadow deformation or use a cheaper coherent shadow treatment. Check that startup, route changes, and teardown leave no duplicate animation loops or resource leaks.
-

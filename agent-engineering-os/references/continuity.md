@@ -33,6 +33,7 @@ Record enough to resume without rereading the entire conversation:
 - Pending operations and external actions, including exact targets and whether attempted, confirmed, failed, or uncertain. Verify the outcome of an interrupted operation before repeating it. Process IDs alone do not establish that a process is still running.
 - A concrete next action and a short remaining plan; authorized scope and any genuinely pending user decision.
 - Confirmed execution environment and material unavailable capabilities when a handoff depends on them; do not preserve a stale model catalog or secret credentials.
+- Material unresolved security/reliability findings, their evidence and priority, mitigation status, and deployment/recovery limits when relevant; omit secret values and unnecessary sensitive records.
 
 Keep the checkpoint compact and current rather than appending a transcript. Preserve unresolved work when marking another item complete. Write UTF-8; prefer a temporary file in the same directory followed by replacement after successful writing when practical. Never replace a useful checkpoint with an empty scaffold. Avoid secrets, credentials, and unnecessary personal data. Do not auto-commit, push, or change ignore rules merely to save a checkpoint.
 
@@ -46,4 +47,3 @@ Keep the checkpoint compact and current rather than appending a transcript. Pres
 - Do not automatically create scheduled jobs, restart sessions, consume reset credits, or bypass usage limits. Resume when the user invokes the skill or the ongoing authorized session continues.
 
 At completion, update the checkpoint with the final outcome, verification, and any remaining limitations. If nothing remains, say so instead of inventing another task.
-
